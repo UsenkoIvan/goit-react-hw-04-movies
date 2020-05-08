@@ -1,0 +1,19 @@
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    margin-right: 40px;
+}
+
+.info {
+    display: flex;
+
+}
+
+.btn {
+    margin: 10px 0;
+}

@@ -1,0 +1,15 @@
+.list {
+    max-width: 300px;
+    list-style: none;
+
+}
+
+.listItem {
+    width: auto;
+
+}
+
+.img {
+    width: 150px;
+    object-fit: contain;
+}
