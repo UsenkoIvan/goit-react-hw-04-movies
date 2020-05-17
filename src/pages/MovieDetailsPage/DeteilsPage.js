@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./MovieDetailsPage.module.css";
 
 const DeteilsPage = ({
+  location,
   id,
   onClickBTN,
   title,
@@ -40,10 +41,20 @@ const DeteilsPage = ({
       <div>
         <p>Additional information</p>
         <ul>
-          <Link to={{ pathname: `/movies/${id}/cast` }}>
+          <Link
+            to={{
+              pathname: `/movies/${id}/cast`,
+              state: location.state,
+            }}
+          >
             <li>Cast</li>
           </Link>
-          <Link to={{ pathname: `/movies/${id}/reviews` }}>
+          <Link
+            to={{
+              pathname: `/movies/${id}/reviews`,
+              state: location.state,
+            }}
+          >
             <li>Reviews</li>
           </Link>
         </ul>

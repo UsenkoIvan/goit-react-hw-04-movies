@@ -19,8 +19,9 @@ export default class MoviesPage extends Component {
 
   componentDidMount() {
     const query = getQueryFromProps(this.props);
-
-    this.fetchMovies(query);
+    if (query) {
+      this.fetchMovies(query);
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -57,12 +58,13 @@ export default class MoviesPage extends Component {
         <ul>
           {movies.map(({ id, title }) => (
             <Link
+              key={id}
               to={{
                 pathname: `${match.path}/${id}`,
                 state: { from: location },
               }}
             >
-              <li key={id}>{title}</li>
+              <li>{title}</li>
             </Link>
           ))}
         </ul>
